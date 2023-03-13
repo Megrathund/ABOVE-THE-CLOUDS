@@ -1,0 +1,888 @@
+
+/*
+    TODO: 
+      - Links in der 'index.html' möchte ich noch mit einem Pfad ausstatten. -----> ✔
+      - Unterseiten anlegen/programmieren. -----> ✔
+      - Ungleiche Umradnung der Bilder bei 'show_images' entfernen. -----> ✔✔ (im Responsive unter 800px geht es nicht mehr...)  (die Bilder waren größer als angezeigt. Der Padding hat funktioniert, nur ein 'height' hat bei den Bilder gefehlt.)
+      - 'show_images'-Bilder zentrieren damit diese in der Mitte der Wegsite angezeigt werden. -----> ✔
+      - Mobil-Menü programmieren. -----> ✔
+      - Website responsive machen. -----> ✔
+      - Bildergallerie machen damit Bilder in großer Form angezeigt werden können. -----> ✔
+
+*/
+
+/* ###########################################################################################################################
+                                        ABOVE THE CLOUDS - ABGESCHLOSSEN AM 26.11.2021
+############################################################################################################################*/
+/* 
+    Status: Abgeschlossen und voll funktionstüchtig
+    Begonnen am: Keine Ahnung XD
+    Abgeschlossen am: 26.11.2021
+
+    Kurze Beschreibung
+    Ein nachgebautes Template von on-mouseover.de (https://www.on-mouseover.de/templates/hp10/).
+    Ein paar kleinigkeiten habe ich geändert: Z.B. habe ich das Mobile-Menü etwas anders gemacht, 
+    da mir das "originale" nicht so ganz zugesagt hat. Auch habe ich einen Umbruch beim Footer 
+    hinzugefügt, was das Original nicht macht. Bilder in der Fotogallerie lassen sich nicht weiterklicken,
+    da ich dieses Mal keine Lust hatte mir die Arbeit für eine klickbare Fotogallerie zu machen. Aber 
+    die Bilder könnnen in Großer Form angezeigt werden. Das Template lässt sich bis auf 206px runter skallieren.
+ */
+
+
+html, body {
+    margin: 0px;
+    padding: 0px;
+
+    font-family: 'open sans', sans-serif;
+
+    background: linear-gradient(to right top, #fff ,silver);
+    background-repeat: no-repeat;
+}
+
+header {
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.header_row {
+    /*display: flex;
+    justify-content: space-between; /*    justify-content: space-between;    */
+
+    line-height: 30px;
+
+    margin-top: 20px;
+}
+
+.header_text {
+    text-align: center;
+    margin-right: 0px;
+    /*margin-left: 400px;*/
+}
+
+.header_text h1 {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-size: 45px;
+    padding: 5px;
+    font-weight: lighter;
+    color: #000000;
+}
+
+/* Ein Teil des Responsiv-Codes vom Header. */
+
+@media screen and (max-width: 1400px) {
+    .header_row .header_text h1 {
+        font-size: 43px;
+    }
+
+    .header_row .header_text p {
+        font-size: 17px;
+    }
+
+    .header_row .header_icons i {
+        font-size: 24px;
+
+        width: 33px;
+        height: 33px;
+    }
+
+    #page .menue {
+        margin-left: 100px;
+    }
+
+    #page .menue a {
+        font-size: 19px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .header_row .header_text h1 {
+        font-size: 40px;
+    }
+
+    .header_row .header_text p {
+        font-size: 17px;
+    }
+
+    .header_row .header_icons i {
+        font-size: 22px;
+
+        width: 28px;
+        height: 28px;
+    }
+
+    #page .menue {
+        margin-left: 50px;
+    }
+
+    #page .menue a {
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    #page .header_row .header_icons {
+        text-align: center;
+        margin: 0px;
+    }
+
+    .header_row .header_text h1 {
+        font-size: 32px;
+    }
+
+    #page .header_row .header_icons i {
+        font-size: 24px;
+
+        width: 32px;
+        height: 32px;
+    }
+
+    .header_row .header_text p {
+        margin-top: 3px;
+        margin-bottom: 10px;
+    }
+}
+
+.first_letter {
+    color: #c22525;
+}
+
+.header_text p {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.header_row .header_icons {
+    text-align: right;
+    margin-right: 150px;
+    margin-bottom: 40px;
+}
+
+.header_icons i {
+    font-size: 25px;
+
+    border-radius: 10px;
+    box-shadow: 0px 0px 1px black;
+    width: 35px;
+    height: 35px;
+
+    padding: 2px;
+
+    display:inline-block;
+    line-height: 35px;
+
+    text-align: center;
+    vertical-align: middle;
+
+}
+
+.header_row .header_icons .row_1 i {
+    background-color:#EFEFEF;
+    color: black;
+}
+
+.header_row .header_icons .row_2 i {
+    background-color: #c22525;
+    color: white;
+}
+
+.header_row .header_icons .row_1 i:hover {
+    background-color: #ffffff;
+}
+
+.header_row .header_icons .row_2 i:hover {
+    background-color: #000000;
+}
+
+/* Normales und Mobiles Menü */
+
+.menue {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    margin-left: 150px;
+}
+
+.menue a {
+    padding: 8px;
+    background-color: white;
+    color: #003946;
+
+    letter-spacing: 1px;
+
+    font-size: 20px;
+
+    border-radius: 10px;
+    box-shadow: 0px 0px 1px black;
+
+    text-decoration: none;
+}
+
+.menue .not_active:hover {
+    background-color: #f2f2f2;
+}
+
+.menue .active {
+    color: #ffffff;
+    background-color: #c22525;
+    font-weight: bold;
+}
+
+
+
+#open_mobile_menue_icon {
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 0px 1px #000000;
+    padding: 13px;
+    width: 20px;
+    background-color: white;
+}
+
+#open_mobile_menue_button {
+
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 0px 1px #000000;
+    background-color: white;
+
+    float: right;
+    position: fixed;
+    z-index: 1;
+    top: 2px;
+    right: 2px;
+}
+
+#open_mobile_menue_button:hover {
+    cursor: pointer;
+}
+
+.mobileMenue_closed {
+    display: none;
+}
+
+.mobileMenue_opened {
+    display: block;
+    position: fixed;
+
+    z-index: 1;
+
+    top: 50px;
+    right: 3px;
+
+
+    /*
+    Damit kann ein Streifen hinzugefügt werden...
+
+    height: 100%;
+    padding-top: 100px;
+    width: 200px;
+    background-color: gray;
+    */
+}
+
+#mobile_menue a {
+    display: block;
+    width: 200px;
+    margin-top: 2px;
+}
+
+/* Ein- und ausblenden der Menü's */
+
+@media screen and (max-width: 960px) {
+    .normal_menue {
+        display: none;
+    }
+
+    #open_mobile_menue_button {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .normal_menue {
+        display: block;
+    }
+    
+    #open_mobile_menue_button {
+        display: none;
+    }
+
+    .mobile_menue {
+        display: none;
+    }
+}
+
+
+
+
+
+.small_red_line {
+    width: 100%;
+    height: 7px;
+    margin: 1px 0px;
+
+    background-color: #c22525;
+}
+
+.big_red_line {
+    width: 100%;
+    height: 10px;
+    margin: 1px 0px;
+
+    background-color: #c22525;
+}
+
+
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box; /* oder border-box? */
+}
+
+.img_slider_box {
+    overflow: hidden;
+}
+
+.img_slider_div {
+    height: 400px;
+    width: 100vw;
+
+    box-sizing: content-box;
+}
+
+.img_slider {
+    width: 900%;
+    height: 400px;
+    /* background-color: chartreuse; */ /* Möglicherweise verursacht der fehlende Hintergrund Bugs!!!! */
+
+    position: relative;
+    animation: 60s slideranimation infinite;
+}
+
+.img_slider figure {
+    position: relative;
+    float: left;
+
+    height: 400px;
+
+    /* object-position: center 20%; */
+}
+
+.img_slider figure img {
+    width: 100vw;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* 8 standbilder und 8 slides */
+/* Damit es aufgeht das man möglichst an 100% kommt, müssen standbilder immer 9.5% ausmachen und die sliderzeiten 3% ausmachen */
+
+@keyframes slideranimation {
+
+    0% {
+        left: 0;
+    }
+
+    9.5% {
+        left: 0%;
+    }
+
+    12.5% {
+        left: -100%;
+    }
+
+    22% {
+        left: -100%;
+    }
+
+    25% {
+        left: -200%;
+    }
+
+    34.5%  {
+        left: -200%;
+    }
+
+    37.5% {
+        left: -300%;
+    }
+
+    47% {
+        left: -300%;
+    }
+
+    50% {
+        left: -400%;
+    }
+
+    59.5% {
+        left: -400%;
+    }
+
+    62.5% {
+        left: -500%;
+    }
+
+    72% {
+        left: -500%;
+    }
+
+    75% {
+        left: -600%;
+    }
+
+    84.5% {
+        left: -600%;
+    }
+
+    87.5%  {
+        left: -700%;
+    }
+
+    97% {
+        left: -700%;
+    }
+
+    100% {
+        left: -800%;
+    }
+}
+
+
+.all_parts {
+    margin: 0px 200px;
+}
+
+.all_parts h1 {
+    margin-top: 75px;
+    margin-bottom: 75px;
+}
+
+.all_parts h2, p {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.all_parts p {
+    font-size: 20px;
+    line-height: 35px;
+}
+
+.all_parts a {
+    color: #000000;
+}
+
+.all_parts .normal_link:hover {
+    text-decoration: none;
+}
+
+.all_parts .external_link i {
+    color: #c22525;
+    padding-right: 5px;
+    animation: link_icon_animation_reverse 0.5s forwards;
+}
+
+.all_parts .external_link:hover {
+    color: #c22525;
+}
+
+.all_parts .external_link:hover i {
+    animation: link_icon_animation_forward 0.5s forwards;
+}
+
+/* Responsive-Teil der 'all_parts'-Elemente. */
+
+@media screen and (min-width: 1300px) {
+    .all_parts  {
+        margin: 0px 150px;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .all_parts  {
+        margin: 0px 100px;
+    }
+
+    .all_parts h1 {
+        font-size: 30px;
+    }
+
+    .all_parts h2 {
+        font-size: 22px;
+    }
+
+    .header_row .header_icons {
+        margin-right: 100px;
+    }
+}
+
+@media screen and (max-width: 1098px) {
+    .all_parts  {
+        margin: 0px 70px;
+    }
+
+    .all_parts h1 {
+        font-size: 28px;
+    }
+
+    .all_parts h2 {
+        font-size: 20px;
+    }
+
+    .header_row .header_icons {
+        margin-right: 70px;
+    }
+}
+
+@media screen and (max-width: 968px) {
+    .all_parts p {
+        font-size: 18px;
+        line-height: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #open_mobile_menue_icon {
+        padding: 12px;
+        width: 18px;
+    }
+
+    .all_parts {
+        margin: 0px 50px;
+    }
+
+    .all_parts h1 {
+        font-size: 25px;
+    }
+
+    .all_parts h2 {
+        font-size: 17px;
+    }
+
+    .all_parts p {
+        font-size: 17px;
+        line-height: 25px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #open_mobile_menue_icon {
+        padding: 11px;
+        width: 18px;
+        font-size: 16px;
+    }
+
+    .all_parts  {
+        margin: 0px 30px;
+    }
+
+    .all_parts p {
+        font-size: 17px;
+        line-height: 25px;
+    }
+}
+
+@keyframes link_icon_animation_forward {
+
+    from {
+        color: #c22525;
+        transform: rotate(0deg);
+    }
+
+    to {
+        color: #000000;
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes link_icon_animation_reverse {
+
+    from {
+        color: #000000;
+        transform: rotate(45deg);
+    }
+
+    to {
+        color: #c22525;
+        transform: rotate(0deg);
+    }
+}
+
+
+
+
+
+.show_images {
+    width: 100%;
+    height: 100%;
+
+    margin-top: 75px;
+    margin-bottom: 75px;
+}
+
+.show_images .row {
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.show_images .row .img_box {
+    background-color: #ffffff;
+    padding: 10px;
+    box-shadow: 0px 0px 1px #000000;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-bottom: 20px;
+}
+
+.show_images .row .img_box img {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+}
+
+.show_images .row .img_box img:hover {
+    cursor: pointer;
+}
+
+/* Der Responsive-Teil der Bilder. */
+
+@media screen and (max-width: 1200px) {
+    .show_images .row .img_box {
+        padding: 7px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .show_images .row .img_box {
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .show_images .row {
+        flex-wrap: wrap;
+    }
+
+    .show_images .row .img_box {
+        padding: 10px;
+    }
+}
+
+/* Fotogallerie */
+
+.photo_gallery {
+    display: block;
+    position: fixed;
+
+    z-index: 2;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 1000px;
+    height: 600px;
+
+    background-color: #c22525;
+
+    border: #000 solid 4px;
+    border-radius: 8px;
+}
+
+.photo_gallery .close_photogallery {
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    font-size: 35px;
+    width: 30px;
+    height: 30px;
+    color: #fff;
+}
+
+.photo_gallery .close_photogallery:hover {
+    color: rgb(230, 230, 230);
+    cursor: pointer;
+}
+
+#photo_gallery_main_image {
+    width: 100%;
+    height: 100%;
+}
+
+.photo_gallery_closed {
+    display: none;
+}
+
+.shade_site {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.shade_site_closed {
+    display: none;
+}
+
+/* Responsive-Teil für die Bildergallery */
+
+@media screen and (max-width: 1550px) {
+    .photo_gallery {
+        width: 800px;
+        height: 500px;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .photo_gallery {
+        width: 700px;
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .photo_gallery {
+        width: 650px;
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .photo_gallery {
+        width: 500px;
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .photo_gallery {
+        width: 450px;
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .photo_gallery {
+        width: 350px;
+        height: 180px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .photo_gallery {
+        width: 250px;
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .photo_gallery {
+        width: 200px;
+        height: 120px;
+    }
+}
+
+
+
+.bottom_menue {
+    text-align: center;
+    margin-top: 75px;
+    margin-bottom: 15px;
+}
+
+.bottom_menue a {
+    font-size: 25px;
+    font-weight: bold;
+
+    background-color: silver;
+    color: black;
+
+    text-decoration: none;
+    border-radius: 10px;
+
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    padding: 2px;
+
+    display:inline-block;
+
+    text-align: center;
+    vertical-align: middle;
+}
+
+.bottom_menue .not_active:hover {
+    background-color: #c22525;
+    color: #ffffff;
+}
+
+.bottom_menue .active {
+    background-color: #4F4F4F;
+    color: #ffffff;
+}
+
+
+
+footer {
+    background: linear-gradient(to right, #8f8f8f, #CECECE, #8f8f8f);
+
+    text-align: center;
+}
+
+footer .footer_text  {
+    padding: 3rem;
+}
+
+footer .footer_text a {
+    padding: 5px;
+    background-color: white;
+    color: #003946;
+
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    font-size: 16px;
+
+    border-radius: 10px;
+    box-shadow: 0px 0px 1px black;
+
+    text-decoration: none;
+}
+
+@media screen and (max-width: 500px) {
+    footer .footer_text a {
+        display: block;
+
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}
+
+footer .footer_text .not_active_footer_button:hover {
+    background-color: #f2f2f2;
+}
+
+footer .footer_text p {
+    text-transform: uppercase;
+    margin: 15px 0px 0px 0px;
+}
+
+footer .footer_text .active_footer_button {
+    background-color: #c22525;
+    color: #fff;
+}
+
