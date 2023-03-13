@@ -3,7 +3,7 @@
     TODO: 
       - Links in der 'index.html' möchte ich noch mit einem Pfad ausstatten. -----> ✔
       - Unterseiten anlegen/programmieren. -----> ✔
-      - Ungleiche Umradnung der Bilder bei 'show_images' entfernen. -----> ✔✔ (im Responsive unter 800px geht es nicht mehr...)  (die Bilder waren größer als angezeigt. Der Padding hat funktioniert, nur ein 'height' hat bei den Bilder gefehlt.)
+      - Ungleiche Umrandung der Bilder bei 'show_images' entfernen. -----> ✔✔ (im Responsive unter 800px geht es nicht mehr...)  (die Bilder waren größer als angezeigt. Der Padding hat funktioniert, nur ein 'height' hat bei den Bilder gefehlt.)
       - 'show_images'-Bilder zentrieren damit diese in der Mitte der Wegsite angezeigt werden. -----> ✔
       - Mobil-Menü programmieren. -----> ✔
       - Website responsive machen. -----> ✔
@@ -25,7 +25,7 @@
     da mir das "originale" nicht so ganz zugesagt hat. Auch habe ich einen Umbruch beim Footer 
     hinzugefügt, was das Original nicht macht. Bilder in der Fotogallerie lassen sich nicht weiterklicken,
     da ich dieses Mal keine Lust hatte mir die Arbeit für eine klickbare Fotogallerie zu machen. Aber 
-    die Bilder könnnen in Großer Form angezeigt werden. Das Template lässt sich bis auf 206px runter skallieren.
+    die Bilder könnnen in großer Form angezeigt werden. Das Template lässt sich bis auf 206px runter skallieren.
  */
 
 
