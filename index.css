@@ -45,18 +45,13 @@ header {
 }
 
 .header_row {
-    /*display: flex;
-    justify-content: space-between; /*    justify-content: space-between;    */
-
     line-height: 30px;
-
     margin-top: 20px;
 }
 
 .header_text {
     text-align: center;
     margin-right: 0px;
-    /*margin-left: 400px;*/
 }
 
 .header_text h1 {
@@ -67,8 +62,6 @@ header {
     font-weight: lighter;
     color: #000000;
 }
-
-/* Ein Teil des Responsiv-Codes vom Header. */
 
 @media screen and (max-width: 1400px) {
     .header_row .header_text h1 {
@@ -194,8 +187,6 @@ header {
     background-color: #000000;
 }
 
-/* Normales und Mobiles Menü */
-
 .menue {
     margin-top: 10px;
     margin-bottom: 30px;
@@ -269,16 +260,6 @@ header {
 
     top: 50px;
     right: 3px;
-
-
-    /*
-    Damit kann ein Streifen hinzugefügt werden...
-
-    height: 100%;
-    padding-top: 100px;
-    width: 200px;
-    background-color: gray;
-    */
 }
 
 #mobile_menue a {
@@ -286,8 +267,6 @@ header {
     width: 200px;
     margin-top: 2px;
 }
-
-/* Ein- und ausblenden der Menü's */
 
 @media screen and (max-width: 960px) {
     .normal_menue {
@@ -341,7 +320,7 @@ header {
     padding: 0px;
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
-    box-sizing: content-box; /* oder border-box? */
+    box-sizing: content-box;
 }
 
 .img_slider_box {
@@ -358,8 +337,7 @@ header {
 .img_slider {
     width: 900%;
     height: 400px;
-    /* background-color: chartreuse; */ /* Möglicherweise verursacht der fehlende Hintergrund Bugs!!!! */
-
+    
     position: relative;
     animation: 60s slideranimation infinite;
 }
@@ -369,8 +347,6 @@ header {
     float: left;
 
     height: 400px;
-
-    /* object-position: center 20%; */
 }
 
 .img_slider figure img {
@@ -495,8 +471,6 @@ header {
 .all_parts .external_link:hover i {
     animation: link_icon_animation_forward 0.5s forwards;
 }
-
-/* Responsive-Teil der 'all_parts'-Elemente. */
 
 @media screen and (min-width: 1300px) {
     .all_parts  {
@@ -652,8 +626,6 @@ header {
     cursor: pointer;
 }
 
-/* Der Responsive-Teil der Bilder. */
-
 @media screen and (max-width: 1200px) {
     .show_images .row .img_box {
         padding: 7px;
@@ -676,7 +648,6 @@ header {
     }
 }
 
-/* Fotogallerie */
 
 .photo_gallery {
     display: block;
@@ -738,7 +709,6 @@ header {
     display: none;
 }
 
-/* Responsive-Teil für die Bildergallery */
 
 @media screen and (max-width: 1550px) {
     .photo_gallery {
